@@ -1,0 +1,92 @@
+#include <iostream>
+using namespace std;
+#include <cstdlib>
+#include <vector>    
+
+class Menu{
+
+public:
+  int Passwords;
+  string Username;
+  int Choose, i;
+  vector<int> Test ={999,111,222,333,444};
+  bool check =false;
+
+int  HomePage(){
+
+    cout << "*************************\n";
+    cout << "**** 1.Library Menu  ****\n";
+    cout << "**** 2.Login account ****\n";
+    cout << "**** 3.Create accont ****\n";
+    cout << "**** 4.Exit          ****\n";
+    cout << "*************************\n\n";
+    cout << "Enter Number of choose \n" ; 
+    cout << ": " ; 
+    cin  >> Choose;
+}
+
+void show(bool check){
+    if (check==true ){
+        cout <<" Show ";
+    }
+    
+}
+
+void Login(){
+    do{
+    cout << "\nEnter your Username:";
+    cin >> Username ;  
+    cout << "\nPassword:";
+    cin >> Passwords;
+    check=false;
+    for ( i = 0 ; i <Test.size() ; i++ ){
+    if (Passwords == Test[i]){
+        check =true;
+        break;
+    }}
+
+    if(!check){
+        cout << "Error \n Please check your username or passwords are correctly";
+    }
+    else{cout << "\nSuccesfull";};
+    }while(!check);
+}
+
+void Loop(){
+   
+    switch (Choose)
+    {
+    case 1:
+        cout << "****1.Library Menu*****\n";
+        break;
+    
+    case 2:
+        Login();
+        break;
+    case 3:
+         cout << "****1.Library Menu*****\n";
+        break;
+    case 4:
+        cout << "Sayonara \n";
+        system("pause");
+        break;
+    
+    do{default:     
+        cout << "Try again" << endl;
+        HomePage();
+        Loop();
+        break;                   
+    
+    }while(Choose<4);
+}}}
+;
+
+
+
+int main(){
+     Menu User;
+     User.HomePage();
+     User.Loop();
+     User.show(User.check);
+    
+}
