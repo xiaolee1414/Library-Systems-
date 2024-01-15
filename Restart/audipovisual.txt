@@ -1,0 +1,10 @@
+
+201 MICROPHONE LIBRARY Audiovisual Active
+
+202 PROJECTOR LIBRARY Audiovisual Active
+
+203 VIDEO_CABLE LIBRARY Audiovisual Active
+
+204 SPEAKER LIBRARY Audiovisual Active
+
+205 LED_LIGHT LIBRARY Audiovisual Active
